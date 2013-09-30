@@ -161,6 +161,7 @@ to replace the symbol under cursor"
   "ud" '(lambda ()(interactive) (gud-gdb (concat "gdb --fullname " (cppcm-get-exe-path-current-buffer))))
   "W" 'save-some-buffers
   "M" 'recentf-open-files
+  "t" 'tabbar-mode
   "K" 'kill-buffer-and-window ;; "k" is preserved to replace "C-g"
   "it" 'issue-tracker-increment-issue-id-under-cursor
   "hh" 'highlight-symbol-at-point

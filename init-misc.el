@@ -19,6 +19,21 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
+;for tabbar
+(global-set-key (kbd "M-h")  'tabbar-backward)  
+(global-set-key (kbd "M-l")  'tabbar-forward)
+(setq tabbar-background-color "#000000")
+;(setq tabbar-background-color "#959A79") ;; the color of the tabbar background
+(custom-set-faces
+  ;'(tabbar-default ((t (:inherit variable-pitch :background "#959A79" :foreground "black" :weight bold))))
+  '(tabbar-default ((t (:inherit variable-pitch :background "#000000" :foreground "black" :weight bold))))
+  '(tabbar-button ((t (:inherit tabbar-default :foreground "dark red"))))
+  '(tabbar-button-highlight ((t (:inherit tabbar-default))))
+  '(tabbar-highlight ((t (:underline t))))
+  '(tabbar-selected ((t (:inherit tabbar-default :background "#95CA59"))))
+  '(tabbar-separator ((t (:inherit tabbar-default :background "#000000"))))
+  '(tabbar-unselected ((t (:inherit tabbar-default)))))
+
 ;; Write backup files to own directory
 (if (not (file-exists-p (expand-file-name "~/.backups")))
     (make-directory (expand-file-name "~/.backups"))
