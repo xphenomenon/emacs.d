@@ -160,6 +160,7 @@ to replace the symbol under cursor"
   "cg" 'helm-ls-git-ls
   "ud" '(lambda ()(interactive) (gud-gdb (concat "gdb --fullname " (cppcm-get-exe-path-current-buffer))))
   "W" 'save-some-buffers
+  "M" 'recentf-open-files
   "K" 'kill-buffer-and-window ;; "k" is preserved to replace "C-g"
   "it" 'issue-tracker-increment-issue-id-under-cursor
   "hh" 'highlight-symbol-at-point
