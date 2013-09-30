@@ -162,6 +162,7 @@ to replace the symbol under cursor"
   "W" 'save-some-buffers
   "M" 'recentf-open-files
   "t" 'tabbar-mode
+  "q" 'kill-emacs
   "K" 'kill-buffer-and-window ;; "k" is preserved to replace "C-g"
   "it" 'issue-tracker-increment-issue-id-under-cursor
   "hh" 'highlight-symbol-at-point
@@ -175,8 +176,8 @@ to replace the symbol under cursor"
   "ov" '(lambda () (interactive) (set-selective-display (if selective-display nil 1)))
   "or" 'open-readme-in-git-root-directory
   "mq" '(lambda () (interactive) (man (concat "-k " (thing-at-point 'symbol))))
-  "gg" '(lambda () (interactive) (w3m-search "g" (thing-at-point 'symbol)))
-  "qq" '(lambda () (interactive) (w3m-search "q" (thing-at-point 'symbol)))
+  ;"gg" '(lambda () (interactive) (w3m-search "g" (thing-at-point 'symbol)))
+  ;"qq" '(lambda () (interactive) (w3m-search "q" (thing-at-point 'symbol)))
   "hr" 'helm-recentf
   "s0" 'delete-window
   "s1" 'delete-other-windows
