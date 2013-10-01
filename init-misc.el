@@ -33,6 +33,14 @@
   '(tabbar-selected ((t (:inherit tabbar-default :background "#95CA59"))))
   '(tabbar-separator ((t (:inherit tabbar-default :background "#000000"))))
   '(tabbar-unselected ((t (:inherit tabbar-default)))))
+; for cscope
+;(add-to-list 'load-path "~/.emacs.d/cscope/") ; only without ELPA/el-get
+(require 'xcscope)
+(setq cscope-do-not-update-database t)
+(global-set-key [f1] 'cscope-find-this-symbol)
+;(global-set-key [f2] 'cscope-find-global-definition-no-prompting)
+(global-set-key [f3] 'cscope-find-functions-calling-this-function)
+(global-set-key [f4] 'cscope-find-this-file)
 
 ;; Write backup files to own directory
 (if (not (file-exists-p (expand-file-name "~/.backups")))
