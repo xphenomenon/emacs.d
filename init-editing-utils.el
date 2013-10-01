@@ -123,7 +123,7 @@
 (browse-kill-ring-default-keybindings)
 
 ;; show trailing spaces in a programming mod
-(add-hook 'prog-mode-hook (lambda () (setq show-trailing-whitespace t)))
+(add-hook 'prog-mode-hook (lambda () (setq show-trailing-whitespace nil)))
 
 ;; turns on auto-fill-mode, don't use text-mode-hook because for some
 ;; mode (org-mode for example), this will make the exported document
