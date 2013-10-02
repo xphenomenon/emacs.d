@@ -1,0 +1,1 @@
+/usr/share/emacs/24.1/etc/themes/manoj-dark-theme.el
