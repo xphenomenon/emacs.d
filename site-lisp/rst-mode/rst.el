@@ -634,6 +634,7 @@ well but give an additional message."
     (rst-define-key map [?\C-c ?\C-=] 'rst-adjust [?\C-c ?\C-a t])
     (rst-define-key map [?\C-=] 'rst-adjust) ; Does not work on the Mac OSX and
 					     ; on consoles.
+    (rst-define-key map [?\C-c ?\C-d] 'rst-adjust) ; Does not work on the Mac OSX and
 
     ;; \C-c \C-a is the keymap for adornments.
     (rst-define-key map [?\C-c ?\C-a ?\C-h] 'describe-prefix-bindings)
@@ -668,8 +669,8 @@ well but give an additional message."
     ;; \C-c \C-r is the keymap for regions.
     (rst-define-key map [?\C-c ?\C-r ?\C-h] 'describe-prefix-bindings)
     ;; Makes region a line-block.
-    (rst-define-key map [?\C-c ?\C-r ?\C-l] 'rst-line-block-region
-		    [?\C-c ?\C-d])
+    ;(rst-define-key map [?\C-c ?\C-r ?\C-l] 'rst-line-block-region
+			;[?\C-c ?\C-d])
     ;; Shift region left or right according to tabs.
     (rst-define-key map [?\C-c ?\C-r tab] 'rst-shift-region
 		    [?\C-c ?\C-r t] [?\C-c ?\C-l t])
