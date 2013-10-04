@@ -116,7 +116,7 @@
 (require 'init-linum-mode)
 ;(require 'init-delicious) ;make startup slow, I don't use delicious in w3m
 (require 'init-emacs-w3m)
-(if (not (boundp 'light-weight-emacs)) (require 'init-eim))
+;(if (not (boundp 'light-weight-emacs)) (require 'init-eim))
 (require 'init-thing-edit)
 (require 'init-which-func)
 (require 'init-keyfreq)
