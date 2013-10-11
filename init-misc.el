@@ -105,7 +105,8 @@
     (hide-bars)
     (toggle-full-screen))
 
-  (global-set-key [f11] 'toggle-full-screen-and-bars)
+  ;(global-set-key [f11] 'toggle-full-screen-and-bars)
+  (global-set-key (kbd "M-RET")  'toggle-full-screen-and-bars)
 
   )
 
