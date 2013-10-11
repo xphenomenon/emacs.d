@@ -63,7 +63,7 @@
 (require 'init-artbollocks-mode)
 (require 'init-recentf)
 (require 'init-ido)
-(if *emacs24* (require 'init-helm))
+;(if *emacs24* (require 'init-helm))
 (require 'init-hippie-expand)
 (require 'init-windows)
 (require 'init-sessions)

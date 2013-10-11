@@ -82,9 +82,9 @@ ARCHIVE is the string name of the package archive.")
      lua-mode
      mmm-mode
      pomodoro
-     helm
-     helm-ls-git
-     helm-c-yasnippet
+     ;helm
+     ;helm-ls-git
+     ;helm-c-yasnippet
      auto-compile
      packed
      cl-lib
@@ -97,7 +97,7 @@ ARCHIVE is the string name of the package archive.")
      pretty-mode
      lively
      auto-complete-clang
-     w3m
+     ;w3m
      ctags
      fakir
      erlang
@@ -253,7 +253,7 @@ ARCHIVE is the string name of the package archive.")
 (require-package 'etags-select '(1 13 0) nil) ;; evil may need it
 ;;evil-20120725 requires ert
 (require-package 'evil '(1 0 3) nil)
-(require-package 'w3m)
+;(require-package 'w3m)
 (require-package 'idomenu)
 (require-package 'ctags)
 (require-package 'buffer-move)
@@ -294,12 +294,12 @@ ARCHIVE is the string name of the package archive.")
 ;;(require-package 'git-messenger '(20130613 1222 0) nil)
 (require-package 'issue-tracker '(0 0 1) nil)
 
-(when *emacs24*
-  (require-package 'helm '(20130409 1040 0) nil)
-  (require-package 'helm-ls-git '(20130310 1401 0) nil)
-  (require-package 'helm-gtags)
-  (require-package 'helm-c-yasnippet)
-  )
+;(when *emacs24*
+  ;(require-package 'helm '(20130409 1040 0) nil)
+  ;(require-package 'helm-ls-git '(20130310 1401 0) nil)
+  ;(require-package 'helm-gtags)
+  ;(require-package 'helm-c-yasnippet)
+  ;)
 ;; (require-package 'command-frequency)
 
 (provide 'init-elpa)
