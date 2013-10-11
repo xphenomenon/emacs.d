@@ -84,8 +84,28 @@
   (defun w32-restore-frame ()
     "Restore a minimized frame."
     (interactive)
-    (w32-send-sys-command 61728)
-    (global-set-key (kbd "C-c z") 'w32-maximize-frame))
+    (w32-send-sys-command 61728))
+  (global-set-key (kbd "C-c z") 'w32-maximize-frame)
+
+  (defun toggle-full-screen ()
+    "Toggles full-screen mode for Emacs window on Win32."
+    (interactive)
+    (shell-command "emacs_fullscreen.exe --topmost"))
+
+  (defun hide-bars ()
+    "Toggles bars visibility."
+    (interactive)
+    (menu-bar-mode -1)
+    (tool-bar-mode -1)
+    (scroll-bar-mode -1))
+
+  (defun toggle-full-screen-and-bars ()
+    "Toggles full-screen mode and bars."
+    (interactive)
+    (hide-bars)
+    (toggle-full-screen))
+
+  (global-set-key [f11] 'toggle-full-screen-and-bars)
 
   )
 
