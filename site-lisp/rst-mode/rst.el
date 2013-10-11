@@ -3933,7 +3933,7 @@ string)) to be used for converting the document."
 (rst-testcover-defcustom)
 
 ;; FIXME: Must be `defcustom`.
-(defvar rst-compile-primary-toolset 'html
+(defvar rst-compile-primary-toolset 'pdf
   "The default tool-set for `rst-compile'.")
 
 ;; FIXME: Must be `defcustom`.
@@ -3977,6 +3977,7 @@ select the alternative tool-set."
          (extension (cadr toolset))
          (options (caddr toolset))
          (conffile (rst-compile-find-conf))
+         (parameter "-s D:/Dropbox/Notebooks/template-rstpdf/restructuredtext.style")
          (bufname (file-name-nondirectory buffer-file-name))
          (outname (file-name-sans-extension bufname)))
 
@@ -3988,6 +3989,7 @@ select the alternative tool-set."
                           (if conffile
                               (concat "--config=" (shell-quote-argument conffile))
                             "")
+                          parameter
                           (shell-quote-argument bufname)
                           (shell-quote-argument (concat outname extension)))
                     " "))
